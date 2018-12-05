@@ -6,10 +6,10 @@ phases:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region us-east-1)
       - ls -lrt
-      - echo Checking $CODEBUILD_SRC_DIR_source1
-      - ls -lrt $CODEBUILD_SRC_DIR_source1
-      - echo Checking $CODEBUILD_SRC_DIR_source2
-      - ls -lrt $CODEBUILD_SRC_DIR_source2
+      - echo Checking $CODEBUILD_SRC_DIR_PackagedSource
+      - ls -lrt $CODEBUILD_SRC_DIR_PackagedSource
+      - echo Changing directories into $CODEBUILD_SRC_DIR_PackagedSource
+      - cd $CODEBUILD_SRC_DIR_PackagedSource
       
   build:
     commands:
