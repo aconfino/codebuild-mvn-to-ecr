@@ -5,6 +5,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region us-east-1)
+      - ls -lrt
   build:
     commands:
       - echo Building the Docker image...   
